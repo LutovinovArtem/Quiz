@@ -1,45 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="QuizWrapper" id="QuizWrapper">
+      <div class="Question" id="Question"></div>
 
-        <div class="Question" id="Question"> Вопрос? </div>
-        
-            <div class="Answers" id="Answers">
-                <p>
-                    <input type="radio" name="Answer" class="radio1" id="radio11" value="1"/> Вариант 1 <br />
-                    <input type="radio" name="Answer" class="radio2" id="radio22" value="2"/> Вариант 2 <br />
-                    <input type="radio" name="Answer" class="radio3" id="radio33" value="3"/> Вариант 3 <br />
-                    <input type="radio" name="Answer" class="radio4" id="radio44" value="4"/> Вариант 4 <br />
-                </p>
-            </div>
+      <div class="Answers" id="Answers"></div>
 
-        <div class="AnswerButton submit" id="answerButton">
-            <button> Ответ </button>
-        </div>
+      <div class="AnswerButton submit" id="AnswerButton">
+        <button onclick="checkAnswer()"> Ответ </button>
+      </div>
     </div>
-    <!-- <form action="main.js">
-        <p><b>вопрос</b></p>
-        <p>
-            <input type="radio" name="answer" value="a1">Ответ 1<Br>
-            <input type="radio" name="answer" value="a2">Ответ 2<Br>
-            <input type="radio" name="answer" value="a3">Ответ 3<Br>
-            <input type="radio" name="answer" value="a4">Ответ 4
-        </p>
-        <p><input type="submit"></p>
-    </form> -->
 
     <script src="main.js"></script>
-
-</body>
-
+  </body>
 </html>
