@@ -1,31 +1,13 @@
-/* .QuizWrapper {
-    width: 500px;
-    height: 200px;
-    border: solid;
-    border-width: 2px;
-    border-color: rgb(0, 0, 0);
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.Question {
-    width: 70px;
-    height: 20px;
-    margin-left: auto;
-    margin-right: auto;
+body {
+  margin: 0;
+  padding-top: 50px;
+  font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
 }
 
 .Answers {
-    width: 120px;
-    height: 20px;
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: 15px;
+  padding-bottom: 20px;
 }
-
-.AnswerButton {
-    width: 55px;
-    height: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-} */

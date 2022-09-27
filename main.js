@@ -21,6 +21,8 @@ const questions = [
 const headerContainer = document.querySelector("#Question");
 const answersContainer = document.querySelector("#Answers");
 const submBtn = document.querySelector("#AnswerButton");
+//
+const button = document.querySelector("#button"); //костыль
 //переменные игры
 let score = 0; //правильные ответы
 let questionIndex = 0; //текущий вопрос
@@ -81,6 +83,31 @@ function checkAnswer() {
   }
 
   function showResults() {
-    // submBtn.disabled = true;
+    let title, message;
+    //варианты заголовков и текста
+    if (score === questions.length) {
+      title = "Поздравляем! 🥳";
+      message = "Вы ответили на все вопросы верно! 👍";
+    } else if ((score * 100) / questions.lenght > 50) {
+      title = "Неплохой результат!  😉";
+      message = "Вы ответили верно на большинство вопросов! 👍";
+    } else {
+      title = "Результат не очень...  🤔";
+      message = "У вас слишком мало правильных ответов! 🫵";
+    }
+
+    //результат
+    let result = `${score} из ${questions.length}`;
+
+    //последнее сообщение
+    const finalMessageTemplate = `<h2 class="title"> ${title} </h2>
+    <h3 class="summary"> ${message} </h3>
+    <p class="result"> ${result} </p>`;
+
+    headerContainer.innerHTML = finalMessageTemplate;
+
+    //играть снова
+    button.innerText = "Пройти заново"; //по идее должно работать через submBtn, но не работает
+    button.onclick = () => history.go(); //обновить страницу
   }
 }
